@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Main menu.png'); /* Ganti dengan path gambar latar belakang yang sesuai */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    color: #fff; /* Warna teks header */
+    padding: 10px 20px;
+}
+
+.menu-icon {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f847b4;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-content.active {
+    display: block;
+}
+
+
+.dashboard {
+    margin-left: 350px;
+    margin-right: auto; /* Untuk memastikan posisi tengah di layar */
+    width: 135%; /* Menyesuaikan lebar agar mengisi sebagian besar layar */
+    max-width: 600px; /* Atur lebar maksimum untuk konten */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tiga kolom yang sama lebar */
+    grid-gap: 10px; /* Jarak antara kolom dan baris */
+    justify-items: center; /* Pusatkan secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal */
+    padding: 100px; /* Jarak dari pinggir layar */
+    height: auto; /* Ketinggian sesuai dengan konten */
+}
+
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Menata letak konten dalam kolom */
+}
+
+.item-piano {
+    grid-column: 1; /* Kolom 1 */
+    grid-row: 1; /* Baris 1 */
+}
+
+.item-saron {
+    grid-column: 2; /* Kolom 2 */
+    grid-row: 2; /* Baris 2 */
+}
+
+.item-drum {
+    grid-column: 3; /* Kolom 3 */
+    grid-row: 1; /* Baris 1 */
+}
+
+.clickable-image {
+    display: block;
+    width: 150px; /* Ukuran ikon */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clickable-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries untuk Responsifitas */
+@media (max-width: 768px) {
+    .dashboard {
+        margin-left: 10%; /* Sesuaikan margin untuk layar yang lebih kecil */
+        width: 80%; /* Sesuaikan lebar untuk layar yang lebih kecil */
+    }
+
+    .clickable-image {
+        width: 120px; /* Ukuran ikon lebih kecil untuk layar yang lebih kecil */
+    }
+}

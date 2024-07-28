@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 7px; /* Tambahkan satuan ukuran, misalnya px */
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99vh;
+  width: 99%;
+  background-image: url(image/Piano\ bg.png);
+}
+
+.clickable-image:hover {
+  transform: scale(1.3); /* Efek zoom saat hover */
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(image/base\ piano.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* margin-top: 50px; */
+  /* margin-bottom: 50px; */
+}
+
+.piano-container {
+  position: relative; /* Ubah ke relative agar posisi tetap di dalam */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  /* padding-top: 10%; */
+  /* margin-top: 30px; */
+}
+
+.back-button {
+  position: absolute;
+  top: -100px;
+  right: 10px;
+  transform: translateX(100px);
+}
+
+.piano-head-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -20px; 
+  background-size: 100px;
+}
+
+.piano-head {
+  width: 925px; /* Ubah nilai lebar sesuai kebutuhan, contoh: 200px */
+  height: 150px; /* Ubah nilai tinggi sesuai kebutuhan, contoh: 150px */
+}
+
+.note-piano {
+  display: flex;
+  justify-content: center;
+}
+
+.piano-keys {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.key {
+  margin: 0 2px;
+}
+
+.key img {
+  display: block;
+  width: 110px;
+  height: 300px;
+}
